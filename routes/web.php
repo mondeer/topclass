@@ -24,3 +24,7 @@ Route::get('topblogs', 'BlogCtrl@show');
 Route::get('/viewblog/{id}', array('as'=>'viewblog', 'uses'=>'BlogCtrl@showblog'));
 
 Route::post('subscribe', 'SubCtrl@Subscribe');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
