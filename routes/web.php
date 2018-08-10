@@ -25,6 +25,19 @@ Route::get('/viewblog/{id}', array('as'=>'viewblog', 'uses'=>'BlogCtrl@showblog'
 
 Route::post('subscribe', 'SubCtrl@Subscribe');
 
-Auth::routes();
+// Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/register', 'RegisterCtrl@register');
+
+Route::post('/system/register', 'RegisterCtrl@postRegister');
+
+Route::get('login', function(){
+  return view('auth.login');
+});
+Route::post('login', 'LoginCtrl@login');
+
+Route::get('topclass/admin', function(){
+  return view('topclass.home');
+});
+
+Route::post('/topclass/assignment', 'QuizCtrl@postQuiz');

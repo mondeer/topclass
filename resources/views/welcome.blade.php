@@ -88,13 +88,94 @@
               </video>
             </div>
             <div class="header-overlay"></div>
+
             <div class="container">
               <div class="header-content text-md-center">
-                <h1 class="imond1">Welcome To Topclass</h1>
+                <!-- <h1 class="imond1">Welcome To Topclass</h1>
                 <p>We at Topclass offer all types of online academic services,
                   be it homework help, coursework help, case study help, thesis/research
                   paper writing help and online exam help. And for each service, each subject and each topic. </p>
-                <a class="btn1">Find Out More</a>
+                <a class="btn1">Find Out More</a> -->
+
+
+                <div class="" data-wow-offset="0" data-wow-delay="0.1s">
+                  <h4 class="h-light imondwhite">Details of Assignment</h4>
+                </div>
+                  <div class="imond">
+                  <form class="form-horizontal" role="form" method="POST" action="/topclass/assignment">
+                      {{ csrf_field() }}
+
+                      @if( session('error') )
+                          <div class="alert alert-danger">
+                            {{ session('error') }}
+                          </div>
+                      @endif
+
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="name" class="col-md-4 control-label">Email</label>
+
+                              <div class="col-md-12">
+                                  <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="palce your email address" required autofocus>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="name" class="col-md-4 control-label">Subject</label>
+
+                              <div class="col-md-12">
+                                  <textarea class="form-control" name="assignment" rows="4" cols="20"></textarea>
+                                  <!-- <input type="text" class="form-control" name="subject" value="{{ old('email') }}" placeholder="palce your email address" required autofocus> -->
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="name" class="control-label">Due Date</label>
+
+                              <div class="col-md-12">
+                                  <input type="text" class="form-control" name="due_date" value="{{ old('due_date') }}" placeholder="mm/dd/yyyy" required autofocus>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                              <label for="name" class="control-label">Length of Assignment</label>
+
+                              <div class="col-md-12">
+                                  <input type="text" class="form-control" name="length_of_assignment" value="{{ old('length_of_assignment') }}" placeholder="how many words/Pages" required autofocus>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- <div class="row">
+                        <div class="col-md-4 col-md-offset-8">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="name" class="control-label">or Upload file</label>
+
+                                <div class="col-md-12">
+                                    <input type="file" name="assignment1">
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div> -->
+
+                      <div class="form-group">
+                          <div class="col-md-6 col-md-offset-6">
+                              <button type="submit" class="btn btn-primary">
+                                  Submit
+                              </button>
+                          </div>
+                      </div>
+                  </form>
+
+                </div>
+
               </div>
                 <h6 class="category category-absolute imondblack">Made by
                     <a href="/">
@@ -118,6 +199,67 @@
                         </div>
                     </div>
                 </div>
+                <!-- The main part -->
+                <div class="container">
+                  <div class="" data-wow-offset="0" data-wow-delay="0.1s">
+                    <h4 class="h-light imondwhite">Details of Assignment</h4>
+                  </div>
+                    <div class="well">
+                    <form class="form-horizontal" role="form" method="POST" action="/topclass/assignment">
+                        {{ csrf_field() }}
+
+                        @if( session('error') )
+                            <div class="alert alert-danger">
+                              {{ session('error') }}
+                            </div>
+                        @endif
+
+                        <div class="row">
+                          <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="name" class="col-md-4 control-label">Email</label>
+
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="palce your email address" required autofocus>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="name" class="col-md-4 control-label">Subject</label>
+
+                                <div class="col-md-12">
+                                    <textarea class="form-control" name="assignment" rows="4" cols="20"></textarea>
+                                    <input type="text" class="form-control" name="subject" value="{{ old('email') }}" placeholder="palce your email address" required autofocus>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="name" class="col-md-4 control-label">Email</label>
+
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="palce your email address" required autofocus>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Register
+                                </button>
+                                <a class="btn btn-success" href="/">
+                                    Login
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+
+                  </div>
+                </div>
+                <!-- main part done -->
             </div>
 
             <div class="container">

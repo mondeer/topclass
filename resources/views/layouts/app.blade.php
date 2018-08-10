@@ -16,7 +16,7 @@
     <meta name="robots" content="index,follow">
 
 
-    <title>Kalya & CO || Advocates</title>
+    <title>TopClass || Best Writers</title>
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="images/favicon/apple-touch-icon.png">
@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700">
     <link rel="icon" href="{{url('/imond/img/imond.png')}}">
     <script src="/blog/tinymce/tinymce.min.js"></script>
+
     <script>
       tinymce.init({
         selector: 'textarea',
@@ -57,50 +58,46 @@
                    <div class="about-fixed">
 
                      <div class="my-pic">
-                        <img src="/imond/img/biorec.png" alt="">
-                        <a href="javascript:void(0)" class="collapsed" data-target="#menu" data-toggle="collapse"><i class="icon-menu menu"></i></a>
-                         <div id="menu" class="collapse">
-                           <ul class="menu-link">
-                             <li><a href="/">Home</a></li>
-                             <li><a href="/topblogs">View Blogs</a></li>
-                             <li><a href="/kalyacontact">Contact</a></li>
-                               @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
+                       <br>
+                       <br>
+                       <br>
+                        <img width="60px" src="/assets/img/topclassbg.png" alt="">
+                        <div style="background-color: 2CC1A4;">
+                          <ul class="menu-link">
 
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="{{ route('logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
+                            @if(Auth::guest())
+                              <li><a href="/">Home</a></li>
+                              <li><a href="/#">View Blogs</a></li>
+                              <li><a href="/#">Contact</a></li>
+                            @else
+                              <li><a href="/">Home</a></li>
+                              <li><a href="/topblogs">View Blogs</a></li>
+                              <li><a href="/newblog">New Blog</a></li>
+                              <li class="dropdown">
+                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                      TopClass <span class="caret"></span>
+                                  </a>
 
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                            </ul>
-                         </div>
+                                  <ul class="dropdown-menu" role="menu">
+                                      <li>
+                                          <a href="{{ route('logout') }}"
+                                              onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">
+                                              Logout
+                                          </a>
+
+                                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                              {{ csrf_field() }}
+                                          </form>
+                                      </li>
+                                  </ul>
+                              </li>
+                            @endif
+                         </ul>
                         </div>
+                      </div>
 
                       <div class="my-detail">
-                        <br>
-                       <br>
-                       <br>
-                        <img src="/blog/images/kalya.png" width="250px">
-                        <div class="white-spacing">
-                            <h1>Kalya & CO Advocates</h1>
-                        </div>
-
                        <ul class="social-icon">
                          <li><a href="http://www.facebook.com/bassaniok" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
                          <li><a href="http://www.twitter.com/mondeer" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
@@ -119,12 +116,12 @@
                     	@yield('content')
                         <!-- Subscribe Form Start -->
                         <div class="col-md-8 col-md-offset-2">
-                           <form id="mc-form" method="post" action="/subscribe">
-
-              						         <div class="subscribe-form margin-top-20">
-              							           <input id="mc-email" type="email" name="email" placeholder="Email Address" class="text-input">
-              							           <button class="submit-btn" type="submit">Submit</button>
-              								     </div>
+                           <form id="" action="/subscribe" method="post">
+                             {{csrf_field()}}
+          						         <div class="subscribe-form margin-top-20">
+          							           <input id="mc-email" type="email" name="email" placeholder="Email Address" class="text-input">
+          							           <button class="submit-btn" type="submit">Submit</button>
+          								     </div>
                               <p>Subscribe to my weekly Thoughts</p>
               								<label for="mc-email" class="mc-label"></label>
               							  </form>
@@ -138,15 +135,19 @@
                        <div class="col-md-12 page-body margin-top-50 footer">
                           <footer>
                           <ul class="menu-link">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="/topblogs">View Blogs</a></li>
-                            <li><a href="/kalyacontact">Contact</a></li>
-                         </ul>
+                               <li><a href="/">Home</a></li>
+                               <li><a href="/topblogs">View Blogs</a></li>
+                               <li><a href="/kalyacontact">Contact</a></li>
+                            </ul>
 
-                       <p>© Copyright 2018 Kalya & CO Advocates. MIT license</p>
+                          <p>&copy;
+                          <script>
+                              document.write(new Date().getFullYear())
+                          </script>,
+                          <a href="http://www.imond.co.ke" target="_blank">TopClass Writers</a>.</p>
 
-           <!-- imond Credit Start -->
-                       <div class="imond-credit">Develped by <i class="fa fa-love"></i><a href="https://imond.co.ke" target="_blank">iMond Solutions</a></div>
+						  <!-- imond Credit Start -->
+                          <div class="imond-credit">Develped by <i class="fa fa-love"></i><a href="https://imond.co.ke" target="_blank">iMond Solutions</a></div>
                           <!-- imond Credit End -->
                          </footer>
                        </div>

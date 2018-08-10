@@ -2582,7 +2582,7 @@ fieldset[disabled] .btn-link.active {
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
-    background-color: #E3E3E3;
+    background-color: #ffffff;
     color: #888;
     cursor: not-allowed;
 }
@@ -2606,8 +2606,9 @@ textarea.form-control {
     resize: none;
     border: none;
     border-bottom: 1px solid #E3E3E3;
-    border-radius: 0;
+    border-radius: 10;
     line-height: 2;
+    background: #fff;
 }
 
 textarea.form-control:focus,
