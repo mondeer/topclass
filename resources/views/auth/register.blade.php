@@ -79,7 +79,7 @@
               <button type="submit" class="btn btn-primary">
                   Register
               </button>
-              <a class="btn btn-success" href="/">
+              <a class="btn btn-success" href="/login">
                   Login
               </a>
           </div>

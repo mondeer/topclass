@@ -35,6 +35,23 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="{{ asset ('dash/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon:200,400,300,500,600,700">
+  <link rel="icon" href="{{url('/imond/img/imond.png')}}">
+  <script src="/blog/tinymce/tinymce.min.js"></script>
+  <!-- All CSS Plugins -->
+  <!-- <link rel="stylesheet" type="text/css" href="{{ asset('blog/css/plugin.css')}}"> -->
+
+  <!-- Main CSS Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="{{ asset('blog/css/style.css')}}">
+
+  <script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'codesample link',
+      toolbar: 'bold, italic, underline, strikethrough, alignleft, aligncenter, alignright, alignjustify, styleselect, fontselect, fontsizeselect, bullist, numlist, outdent, indent, blockquote, subscript, superscript'
+    });
+  </script>
+
 </head>
 <body class="hold-transition skin-red sidebar-mini">
 <div class="wrapper">
@@ -132,7 +149,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/topclass/assignments"><i class="fa fa-circle-o"></i>Assignment Requests</a></li>
+            <li><a href="/topclass/viewquiz"><i class="fa fa-circle-o"></i>Assignment Requests</a></li>
             <li><a href="/topclass/completed"><i class="fa fa-circle-o"></i>Completed Assignments</a></li>
           </ul>
         </li>
@@ -157,8 +174,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/topclassadmin/tutors/view"><i class="fa fa-eye"></i>View Blogs </a></li>
-            <li><a href="/topclassadmin/tutors/view"><i class="fa fa-eye"></i>New Blog </a></li>
+            <li><a href="/topblogs"><i class="fa fa-eye"></i>View Blogs </a></li>
+            <li><a href="/newblog"><i class="fa fa-eye"></i>New Blog </a></li>
           </ul>
         </li>
 
@@ -259,6 +276,12 @@
 <!-- DataTables -->
 <script src="{{ asset ('dash/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{ asset ('dash/plugins/datatables/dataTables.bootstrap.min.js')}}"></script>
+
+<!-- <script type="text/javascript" src="{{ asset('blog/js/jquery.min.js')}}"></script> -->
+<script type="text/javascript" src="{{ asset('blog/js/plugin.js')}}"></script>
+
+<!-- Main Javascript File  -->
+<script type="text/javascript" src="{{ asset('blog/js/scripts.js')}}"></script>
 
 </body>
 </html>

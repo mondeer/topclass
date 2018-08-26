@@ -9,7 +9,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- SEO -->
-    <meta name="description" content="150 words">
+    <meta name="description" content="Topclass writers helps in doing your assignment and your project without forgeting your theses." />
+    <meta name="keywords" content="assignment, assignments, writing, best writers, freelancers, freelancing, thesis help" />
+    <meta name="author" content="Laban, iMond Solutions" />
     <meta name="author" content="Mondia Kering">
     <meta name="url" content="http://www.imond.co.ke">
     <meta name="copyright" content="iMond Solutions">

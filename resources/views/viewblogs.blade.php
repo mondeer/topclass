@@ -5,8 +5,8 @@
 
 
       <div class="sub-title">
-        <h2>iMond Solutions</h2>
-          <a href="/kalyacontact"><i class="icon-envelope"></i></a>
+        <h2>TopClass Writers</h2>
+          <a href="/"><i class="icon-envelope"></i></a>
        </div>
 
 

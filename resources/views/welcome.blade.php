@@ -6,6 +6,9 @@
     <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="./assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Topclass writers helps in doing your assignment and your project without forgeting your theses." />
+    <meta name="keywords" content="assignment, assignments, writing, best writers, freelancers, freelancing, thesis help" />
+    <meta name="author" content="Laban, iMond Solutions" />
     <title>TopClass || Freelancers</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -35,25 +38,25 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0)" onclick="scrollToDownload()">
-                            <i class="now-ui-icons arrows-1_cloud-download-93"></i>
+                        <a class="nav-link" href="/freelancers/enroll">
+                            <i class="fa fa-pencil"></i>
                             <p>Become a Writer</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./documentation/tutorial-components.html" target="_blank">
+                        <a class="nav-link" href="/assignment/submit" target="_blank">
                             <i class="now-ui-icons files_paper"></i>
                             <p>Submit Assignment</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./documentation/tutorial-components.html" target="_blank">
-                            <i class="now-ui-icons files_paper"></i>
-                            <p>Samples</p>
+                        <a class="nav-link" href="/topclass/services">
+                            <i class="fa fa-superpowers"></i>
+                            <p>Services</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link btn btn-neutral" href="https://www.creative-tim.com/product/now-ui-kit-pro" target="_blank">
+                        <a class="nav-link btn btn-neutral" href="{{ url('/login')}}">
                             <i class="now-ui-icons arrows-1_share-66"></i>
                             <p>Login</p>
                         </a>
@@ -201,63 +204,32 @@
                 </div>
                 <!-- The main part -->
                 <div class="container">
-                  <div class="" data-wow-offset="0" data-wow-delay="0.1s">
-                    <h4 class="h-light imondwhite">Details of Assignment</h4>
-                  </div>
-                    <div class="well">
-                    <form class="form-horizontal" role="form" method="POST" action="/topclass/assignment">
-                        {{ csrf_field() }}
-
-                        @if( session('error') )
-                            <div class="alert alert-danger">
-                              {{ session('error') }}
-                            </div>
-                        @endif
-
-                        <div class="row">
-                          <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="name" class="col-md-4 control-label">Email</label>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="palce your email address" required autofocus>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="name" class="col-md-4 control-label">Subject</label>
-
-                                <div class="col-md-12">
-                                    <textarea class="form-control" name="assignment" rows="4" cols="20"></textarea>
-                                    <input type="text" class="form-control" name="subject" value="{{ old('email') }}" placeholder="palce your email address" required autofocus>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="form-group">
-                                <label for="name" class="col-md-4 control-label">Email</label>
-
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="palce your email address" required autofocus>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Register
-                                </button>
-                                <a class="btn btn-success" href="/">
-                                    Login
-                                </a>
-                            </div>
-                        </div>
-                    </form>
-
-                  </div>
+                  <br><br><br>
+                    <div class="row">
+                      <div class="col-md-4 text-center">
+                        <i class="fa fa-cloud-upload fa-4x"></i><br>
+                        <b>SUBMIT YOUR ASSIGNMENT</b>
+                        <p align='justify'>Simply visit myassignmenthelp.com and fill up the
+                        assignment submission form. Mention the assignment
+                        requirements and upload the files. You can immediately
+                        chat with 24 x 7 assignment expert and get the best price.</p>
+                      </div>
+                      <div class="col-md-4 text-center">
+                        <i class="fa fa-cc-paypal fa-4x"></i><br>
+                        <b>PAY FOR ASSIGNMENT</b>
+                        <p align="justify">
+                        Once you receive best price for your assignment, process
+                        the payment through- paypal,credit card, debit card or online banking.</p>
+                      </div>
+                      <div class="col-md-4 text-center">
+                        <i class="fa fa-cloud-download fa-4x"></i><br>
+                        <b>GET ASSIGNMENT SOLUTION</b>
+                        <p align="justify">
+                        Your high quality and well referenced assignment will
+                        be delivered straight in your MyAssignmenthelp.com’s
+                        student account, long before the agreed deadline.</p>
+                      </div>
+                    </div>
                 </div>
                 <!-- main part done -->
             </div>
@@ -265,7 +237,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-md-6  text-center">
-                  <img width="400px" src="/assets/img/openbooks1.png" alt="">
+                  <img width="400px" src="/assets/img/top2.jpg" alt="">
                 </div>
                 <div class="col-md-6 text-justify">
                   <b>On Time Delivery</b> <br>

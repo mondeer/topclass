@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Kalya & CO || Advocates</title>
+        <title>TopClass || Writers</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Kalya and company advocates is a legal firm located in eldoret kenya owned by wilson kiplagat kalya, its also a commissioner of oaths and public notaries" />
-        <meta name="keywords" content="legal kenya, notaries public, eldoret legal, kenya legal firms, eldoret legal, eldoret law firms, legal advice" />
+        <meta name="description" content="Topclass writers helps in doing your assignment and your project without forgeting your theses." />
+        <meta name="keywords" content="assignment, assignments, writing, best writers, freelancers, freelancing, thesis help" />
         <meta name="author" content="Laban, iMond Solutions" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 

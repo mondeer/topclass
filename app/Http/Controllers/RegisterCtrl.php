@@ -20,7 +20,7 @@ class RegisterCtrl extends Controller
     ]);
 
     $admin = Sentinel::findRoleBySlug('admin');
-    $freelancer = Sentinel::findRoleBySlug('free');
+    $freelancer = Sentinel::findRoleBySlug('freelancer');
     $customer = Sentinel::findRoleBySlug('customer');
 
     $role = $request->input('role');

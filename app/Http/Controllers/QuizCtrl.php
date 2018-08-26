@@ -18,4 +18,16 @@ class QuizCtrl extends Controller
 
       return redirect()->back();
     }
+
+    public function viewQuiz() {
+      $quizes = Quiz::all();
+
+      return view('topclass.assignment.view')->with('quizes', $quizes);
+    }
+
+    public function assView($id) {
+      $ass = Quiz::findOrFail($id);
+
+      return view('topclass.assignment.assview')->with('ass', $ass);
+    }
 }

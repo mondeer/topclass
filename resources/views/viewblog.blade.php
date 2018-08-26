@@ -3,11 +3,11 @@
 @section('content')
 <div class="row">
   <div class="sub-title">
- 		<a href="/imondblog" title="Go to Home Page"><h2>Back Home</h2></a>
+ 		<a href="/topblogs" title="Go to Home Page"><h2>Back Home</h2></a>
       <a href="#" class="smoth-scroll"><i class="icon-bubbles"></i></a>
    </div>
 
-  <div class="col-md-10 col-md-offset-2">
+  <div class="col-md-12">
       <h1>{{$blog->title}}</h1>
       <p>
         By {{$blog->author}}
