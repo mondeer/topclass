@@ -3,10 +3,12 @@
 namespace topclass\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use topclass\Quiz;
 use topclass\Freelance;
 use Kagga\Telco\facades\Telco;
 use Mail;
+use Illuminate\Http\File;
 
 class QuizCtrl extends Controller
 {
@@ -69,7 +71,7 @@ class QuizCtrl extends Controller
       return redirect('topclass/viewquiz/'.$assignment->id)->with('assignment', $assignment);
     }
 
-    public function submitQuiz($id) {
+    public function submitQuiz(Request $request, $id) {
       $assignment = Quiz::findOrFail($id);
 
       $email = $assignment->email;
@@ -79,11 +81,18 @@ class QuizCtrl extends Controller
         'email' => $email,
         'content' => $content
       );
+      $attach = $request->file('solution');
+      // $attach = ('/root/Laravel/Monetary/top/public/'.$solution);
 
-      Mail::send('topclass.emails.submit', ['title' => $title, 'content' => $content], function($message) {
+      Mail::send('topclass.emails.submit', ['title' => $title, 'content' => $content], function($message) use($attach) {
 
         $message->to('keringlab@yahoo.com', 'Laban Kering')
   	            ->subject('Solution to problem');
+        $message->attach($attach->getRealPath(),
+                [
+                    'as' => $attach->getClientOriginalName(),
+                    'mime' => $attach->getClientMimeType(),
+                ]);
   	    $message->from('mondiakering@gmail.com','TopClass Writers');
   	  });
 

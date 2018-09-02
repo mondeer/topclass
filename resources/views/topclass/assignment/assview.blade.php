@@ -4,9 +4,9 @@
   <div class="row">
     <div class="col-md-offset-1 col-md-8">
       <a class="btn btn-success btn-lg pull-right" href="#">
-        <form class="delete" action="/topclass/quiz/submit/{{$ass->id}}" method="post">
-          <input type="hidden" name="_method" value="post">
-          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+        <form class="form" enctype="multipart/form-data" action="/topclass/quiz/submit/{{$ass->id}}" method="post">
+          {{ csrf_field() }}
+          <input type="file" name="solution" value="" placeholder="Upload solution">
           <input type="submit" class="btn btn-danger" value="Submit">
         </form>
       </a>
