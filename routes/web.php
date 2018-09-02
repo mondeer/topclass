@@ -66,6 +66,10 @@ Route::get('/topclass/viewquiz', 'QuizCtrl@viewQuiz');
 
 Route::get('topclass/viewquiz/{id}', 'QuizCtrl@assView');
 
+Route::get('/topclass/quiz-assign-writer/{id}', 'QuizCtrl@indexWriter');
+
+Route::put('/topclass/quiz-assign-writer/{id}', 'QuizCtrl@assignWriter');
+
 Route::delete('/topclass/quiz/{id}', 'QuizCtrl@destroy');
 
 // end admin quiz control
@@ -79,5 +83,11 @@ Route::post('/freelancers/enroll', 'FreelanceCtrl@enrollFreelance');
 
 // admin view writer applications
 Route::get('/topclass/freelance/applications', 'FreelanceCtrl@viewApplications');
+
+Route::put('/topclass/writer/hire/{id}', 'FreelanceCtrl@acceptWriter');
+
+Route::get('/topclass/freelance/hired', 'FreelanceCtrl@hiredWriters');
+
+Route::delete('/topclass/freelance/application/{id}', 'FreelanceCtrl@destroy');
 
 // ASSIGNMENT

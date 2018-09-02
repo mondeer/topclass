@@ -4,6 +4,7 @@ namespace topclass\Http\Controllers;
 
 use Illuminate\Http\Request;
 use topclass\Quiz;
+use topclass\Freelance;
 use Kagga\Telco\facades\Telco;
 
 class QuizCtrl extends Controller
@@ -44,6 +45,27 @@ class QuizCtrl extends Controller
       $ass = Quiz::findOrFail($id);
 
       return view('topclass.assignment.assview')->with('ass', $ass);
+    }
+
+    public function indexWriter($id) {
+      $assignment = Quiz::findOrFail($id);
+
+      $writers = Freelance::all()->where('status_of_acceptance', 'hired');
+
+      return view('topclass.assignment.admin.update')->with(array(
+                                                            'assignment' => $assignment,
+                                                            'writers' => $writers
+                                                             ));
+
+    }
+
+    public function assignWriter(Request $request, $id) {
+      $assignment = Quiz::findOrFail($id);
+
+      $assignment->writer = $request->input('writer');
+      $assignment->save();
+
+      return redirect('topclass/viewquiz/'.$assignment->id)->with('assignment', $assignment);
     }
 
     public function destroy($id) {

@@ -21,4 +21,37 @@ class FreelanceCtrl extends Controller
 
       return view('topclass.freelancers.success')->with('freelance', $freelance);
     }
+
+    public function viewApplications() {
+      $applications = Freelance::all();
+
+      $applicants = $applications->where('status_of_acceptance', 'pending');
+
+      return view('topclass.freelancers.admin.view')->with('applicants', $applicants);
+    }
+
+    public function acceptWriter($id) {
+      $writer = Freelance::findOrFail($id);
+
+      $writer->status_of_acceptance = 'hired';
+      $writer->save();
+
+      return redirect()->back();
+    }
+
+    public function hiredWriters() {
+      $applications = Freelance::all();
+
+      $hires = $applications->where('status_of_acceptance', 'hired');
+
+      return view('topclass.freelancers.admin.hired')->with('hires', $hires);
+    }
+
+    public function destroy($id) {
+      $application = Freelance::findOrFail($id);
+
+      $application->destroy();
+
+      return redirect()->back();
+    }
 }

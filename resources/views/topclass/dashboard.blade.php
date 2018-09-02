@@ -162,8 +162,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="/topclassadmin/students/view"><i class="fa fa-circle-o"></i>View Freelancers</a></li>
-            <li><a href="/topclassadmin/students/view"><i class="fa fa-circle-o"></i>Enroll Freelancers</a></li>
+            <li><a href="/topclass/freelance/applications"><i class="fa fa-circle-o"></i>Freelancers Applications</a></li>
+            <li><a href="/topclass/freelance/hired"><i class="fa fa-circle-o"></i>Hired Writers</a></li>
           </ul>
         </li>
 
@@ -240,8 +240,15 @@
 </script>
 
 <script>
+  $(".hire").on("submit", function(){
+    return confirm("You are about to Hire a Writer, Continue?");
+  });
+
+</script>
+
+<script>
   $(".deletexp").on("submit", function(){
-    return confirm("You are about to permanently delete an expense record, Continue?");
+    return confirm("You are about to permanently delete an applicaation record, Continue?");
   });
 
 </script>

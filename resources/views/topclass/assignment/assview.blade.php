@@ -4,8 +4,8 @@
   <div class="row">
     <div class="col-md-offset-1 col-md-8">
       <a class="btn btn-success btn-lg pull-right" href="#">Submit Solution</a>
-      <a class="btn btn-success btn-lg pull-left" href="#">Assign Writer</a>
-      <br><br><hr>
+      <a class="btn btn-success btn-lg pull-left" href="/topclass/quiz-assign-writer/{{$ass->id}}">Assign Writer</a>
+      <br><br><hr style="border-right: 1px solid #F20000;"></hr>
       <div>
         <table class="table table-bordered table-striped">
           <tr>
