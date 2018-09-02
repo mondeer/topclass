@@ -3,7 +3,13 @@
 @section('content')
   <div class="row">
     <div class="col-md-offset-1 col-md-8">
-      <a class="btn btn-success btn-lg pull-right" href="#">Submit Solution</a>
+      <a class="btn btn-success btn-lg pull-right" href="#">
+        <form class="delete" action="/topclass/quiz/submit/{{$ass->id}}" method="post">
+          <input type="hidden" name="_method" value="post">
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <input type="submit" class="btn btn-danger" value="Submit">
+        </form>
+      </a>
       <a class="btn btn-success btn-lg pull-left" href="/topclass/quiz-assign-writer/{{$ass->id}}">Assign Writer</a>
       <br><br><hr style="border-right: 1px solid #F20000;"></hr>
       <div>

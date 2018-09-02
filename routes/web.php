@@ -72,6 +72,8 @@ Route::put('/topclass/quiz-assign-writer/{id}', 'QuizCtrl@assignWriter');
 
 Route::delete('/topclass/quiz/{id}', 'QuizCtrl@destroy');
 
+Route::post('/topclass/quiz/submit/{id}', 'QuizCtrl@submitQuiz');
+
 // end admin quiz control
 
 // Freelancers

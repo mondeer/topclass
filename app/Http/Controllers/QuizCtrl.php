@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use topclass\Quiz;
 use topclass\Freelance;
 use Kagga\Telco\facades\Telco;
+use Mail;
 
 class QuizCtrl extends Controller
 {
@@ -66,6 +67,27 @@ class QuizCtrl extends Controller
       $assignment->save();
 
       return redirect('topclass/viewquiz/'.$assignment->id)->with('assignment', $assignment);
+    }
+
+    public function submitQuiz($id) {
+      $assignment = Quiz::findOrFail($id);
+
+      $email = $assignment->email;
+      $title = ($assignment->first_name.' '.$assignment->last_name);
+      $content = $assignment->instructions;
+      $data = array(
+        'email' => $email,
+        'content' => $content
+      );
+
+      Mail::send('topclass.emails.submit', ['title' => $title, 'content' => $content], function($message) {
+
+        $message->to('keringlab@yahoo.com', 'Laban Kering')
+  	            ->subject('Solution to problem');
+  	    $message->from('mondiakering@gmail.com','TopClass Writers');
+  	  });
+
+      return redirect()->back()->with('assignment', $assignment);
     }
 
     public function destroy($id) {
