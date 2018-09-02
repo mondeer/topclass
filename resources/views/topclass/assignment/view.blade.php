@@ -7,10 +7,12 @@
             <thead>
               <tr>
                 <th>ID</th>
-                <th>Customer Email</th>
+                <th>Subject, Level, Page_count</th>
                 <th>Question</th>
-                <th>Due Date</th>
-                <th>Length of Assignment</th>
+                <th>Assignment Type</th>
+                <th>Deadline</th>
+                <th>Email</th>
+                <th>Phone</th>
                 <th>EDIT</th>
                 <th>Delete</th>
               </tr>
@@ -19,13 +21,15 @@
               @foreach($quizes as $quiz)
                 <tr>
                     <td>{{$quiz->id}}</td>
-                    <td>{{$quiz->email_customer}}</td>
-                    <td>{!! str_limit($quiz->question, $limit = 50, $end = "...") !!}</td>
-                    <td>{{$quiz->due_date}}</td>
-                    <td>{{$quiz->length_of_assignment}}</td>
+                    <td>{{$quiz->subject}}, {{$quiz->level}}, {{$quiz->page_count}}</td>
+                    <td>{!! str_limit($quiz->instructions, $limit = 50, $end = "...") !!}</td>
+                    <td>{{$quiz->work_type}}</td>
+                    <td>{{$quiz->deadline}}</td>
+                    <td>{{$quiz->email}}</td>
+                    <td>{{$quiz->phone}}</td>
                     <td><a class="btn btn-primary" href="/topclass/viewquiz/{{$quiz->id}}">View</a></td>
                     <td>
-                      <form class="delete" action="/topclass/{{ $quiz->id }}" method="post">
+                      <form class="delete" action="/topclass/quiz/{{ $quiz->id }}" method="post">
                         <input type="hidden" name="_method" value="delete">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <input type="submit" class="btn btn-danger" value="Delete">

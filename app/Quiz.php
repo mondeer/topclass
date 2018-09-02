@@ -6,5 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Quiz extends Model
 {
-    protected $fillable = ['email_customer','question', 'due_date','length_of_assignment'];
+    protected $fillable = ['subject',
+                          'level',
+                          'work_type',
+                          'page_count',
+                          'language',
+                          'deadline',
+                          'topic',
+                          'instructions',
+                          'email',
+                          'phone',
+                          'writer'];
 }

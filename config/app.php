@@ -146,6 +146,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Kagga\Telco\TelcoServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -160,6 +161,7 @@ return [
         topclass\Providers\EventServiceProvider::class,
         topclass\Providers\RouteServiceProvider::class,
         Cartalyst\Sentinel\Laravel\SentinelServiceProvider::class,
+
     ],
 
     /*
@@ -211,7 +213,7 @@ return [
         'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
         'Reminder'   => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
         'Sentinel'   => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
-
+        'Telco' => Kagga\Telco\facades\Telco::class,
     ],
 
 ];

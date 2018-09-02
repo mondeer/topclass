@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "334c4cedd48f94b8139c5762b814777b",
+    "content-hash": "a670b3391422cf542ebb76784031cbbe",
     "packages": [
         {
             "name": "cartalyst/sentinel",
@@ -589,6 +589,39 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "kagga/telco",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jokamjohn/telco.git",
+                "reference": "49443d606e422eec7959010aa9b4ee39dc196933"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jokamjohn/telco/zipball/49443d606e422eec7959010aa9b4ee39dc196933",
+                "reference": "49443d606e422eec7959010aa9b4ee39dc196933",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kagga\\Telco\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "John Kagga",
+                    "email": "johnkagga@arvana.io"
+                }
+            ],
+            "description": "Wrapper around the AfricasTalking api",
+            "time": "2017-01-17T17:33:55+00:00"
         },
         {
             "name": "laravel/framework",

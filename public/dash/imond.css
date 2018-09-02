@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Metamorphous|Kanit|Righteous|Bree+Serif|Dancing+Script|Great+Vibes');
+
 .imondblack {
   background: #262A2D;
   border-radius: 10px;
   border: 1px black solid;
   color: #eee;
+}
+
+.imondfont {
+  font-family: kanit;
 }

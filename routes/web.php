@@ -19,6 +19,7 @@ Route::get('/topclass/services', function(){
   return view('services');
 });
 
+// blogs start
 Route::get('newblog', 'BlogCtrl@index');
 
 Route::post('newblog', 'BlogCtrl@postCreate');
@@ -29,10 +30,11 @@ Route::get('/viewblog/{id}', array('as'=>'viewblog', 'uses'=>'BlogCtrl@showblog'
 
 Route::get('topclass/adminblogs', 'BlogCtrl@adminBlogs');
 
+// end blogs
+
 Route::post('subscribe', 'SubCtrl@Subscribe');
 
-// Auth::routes();
-
+//Admin routes;
 Route::get('/topclass/register', 'RegisterCtrl@register');
 
 Route::post('/system/register', 'RegisterCtrl@postRegister');
@@ -48,20 +50,34 @@ Route::get('topclass/admin', function(){
   return view('topclass.home');
 });
 
-Route::post('/topclass/assignment', 'QuizCtrl@postQuiz');
+// quiz routes client
+Route::get('/assignment/submit', 'QuizCtrl@indexQuiz');
 
+Route::post('/assignment/submit', 'QuizCtrl@postQuiz');
+
+Route::get('/ass/submit/success', function(){
+  return view('topclass.customers.success');
+});
+
+// end quiz client
+
+// quiz control admin
 Route::get('/topclass/viewquiz', 'QuizCtrl@viewQuiz');
 
 Route::get('topclass/viewquiz/{id}', 'QuizCtrl@assView');
 
-// Freelancers
+Route::delete('/topclass/quiz/{id}', 'QuizCtrl@destroy');
 
+// end admin quiz control
+
+// Freelancers
 Route::get('/freelancers/enroll', function(){
   return view('topclass.freelancers.enroll');
 });
 
-// ASSIGNMENT
+Route::post('/freelancers/enroll', 'FreelanceCtrl@enrollFreelance');
 
-Route::get('/assignment/submit', function(){
-  return view('topclass.customers.submit');
-});
+// admin view writer applications
+Route::get('/topclass/freelance/applications', 'FreelanceCtrl@viewApplications');
+
+// ASSIGNMENT

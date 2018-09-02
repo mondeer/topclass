@@ -11,10 +11,17 @@ class CreateQuizzesTable extends Migration
     {
         Schema::create('quizzes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email_customer');
-            $table->text('question');
-            $table->string('due_date');
-            $table->string('length_of_assignment');
+            $table->string('subject');
+            $table->string('level');
+            $table->string('work_type');
+            $table->string('page_count');
+            $table->string('language');
+            $table->string('deadline');
+            $table->string('topic');
+            $table->text('instructions');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('writer');
             $table->timestamps();
         });
     }

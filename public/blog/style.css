@@ -2,6 +2,7 @@
         Companyportfolio
         Built with Blocs
 -----------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Metamorphous|Kanit');
 
 body{
 	margin:0;
@@ -13,7 +14,9 @@ body{
 }
 a:hover{text-decoration: none; cursor:pointer;}
 
-
+imondfont {
+	font-family: Metamorphous;
+}
 .active {
     color: yellow;
 }

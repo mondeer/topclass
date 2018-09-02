@@ -27,6 +27,7 @@
   <!-- Morris chart -->
   <link rel="stylesheet" href="{{ asset ('dash/plugins/morris/morris.css')}}">
   <!-- jvectormap -->
+  <link rel="stylesheet" href="{{ asset ('dash/imond.css')}}">
   <link rel="stylesheet" href="{{ asset ('dash/plugins/jvectormap/jquery-jvectormap-1.2.2.css')}}">
   <!-- Date Picker -->
   <link rel="stylesheet" href="{{ asset ('dash/plugins/datepicker/datepicker3.css')}}">
@@ -35,7 +36,7 @@
   <!-- bootstrap wysihtml5 - text editor -->
   <link rel="stylesheet" href="{{ asset ('dash/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Do+Hyeon:200,400,300,500,600,700">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Metamorphous?selection.family=Ubuntu:200,400,300,500,600,700">
   <link rel="icon" href="{{url('/imond/img/imond.png')}}">
   <script src="/blog/tinymce/tinymce.min.js"></script>
   <!-- All CSS Plugins -->

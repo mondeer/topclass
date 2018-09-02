@@ -15,7 +15,6 @@
     <meta name="copyright" content="iMond Solutions">
     <meta name="robots" content="index,follow">
 
-
     <title>TopClass || Best Writers</title>
 
     <!-- Favicon -->
@@ -64,45 +63,19 @@
                         <img width="60px" src="/assets/img/topclassbg.png" alt="">
                         <div style="background-color: 2CC1A4;">
                           <ul class="menu-link">
-
-                            @if(Auth::guest())
-                              <li><a href="/">Home</a></li>
-                              <li><a href="/#">View Blogs</a></li>
-                              <li><a href="/#">Contact</a></li>
-                            @else
-                              <li><a href="/">Home</a></li>
-                              <li><a href="/topblogs">View Blogs</a></li>
-                              <li><a href="/newblog">New Blog</a></li>
-                              <li class="dropdown">
-                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                      TopClass <span class="caret"></span>
-                                  </a>
-
-                                  <ul class="dropdown-menu" role="menu">
-                                      <li>
-                                          <a href="{{ route('logout') }}"
-                                              onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
-                                              Logout
-                                          </a>
-
-                                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                              {{ csrf_field() }}
-                                          </form>
-                                      </li>
-                                  </ul>
-                              </li>
-                            @endif
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/#">View Blogs</a></li>
+                            <li><a href="/#">Contact</a></li>
                          </ul>
                         </div>
                       </div>
 
                       <div class="my-detail">
                        <ul class="social-icon">
-                         <li><a href="http://www.facebook.com/bassaniok" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
-                         <li><a href="http://www.twitter.com/mondeer" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                         <li><a href="http://www.facebook.com/topclass" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                         <li><a href="http://www.twitter.com/topclass" target="_blank" class="twitter"><i class="fa fa-twitter"></i></a></li>
                          <!-- <li><a href="#" target="_blank" class="linkedin"><i class="fa fa-linkedin"></i></a></li> -->
-                         <li><a href="http://www.github.com/mondeer" target="_blank" class="github"><i class="fa fa-github"></i></a></li>
+                         <li><a href="http://www.instagram.com/@topclass" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a></li>
                         </ul>
 
                     </div>
@@ -144,7 +117,7 @@
                           <script>
                               document.write(new Date().getFullYear())
                           </script>,
-                          <a href="http://www.imond.co.ke" target="_blank">TopClass Writers</a>.</p>
+                          <a href="http://www.topclass.co.ke" target="_blank">TopClass Writers</a>.</p>
 
 						  <!-- imond Credit Start -->
                           <div class="imond-credit">Develped by <i class="fa fa-love"></i><a href="https://imond.co.ke" target="_blank">iMond Solutions</a></div>

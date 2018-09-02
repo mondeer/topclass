@@ -35,7 +35,7 @@ class RegisterCtrl extends Controller
       $customer->users()->attach($user);
     }
 
-    return redirect('/');
+    return redirect('/login');
 
   }
 }

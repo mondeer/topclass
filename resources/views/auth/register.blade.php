@@ -49,7 +49,7 @@
           <div class="col-md-4">
             <select class="form-control" name="role">
               <option></option>
-              <!-- <option value="admin">System Admin</option> -->
+              <option value="admin">System Admin</option>
               <option value="freelancer">Writer</option>
               <option value="customer">Student</option>
             </select>

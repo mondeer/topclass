@@ -13,7 +13,7 @@ class LoginCtrl extends Controller
       if ( Sentinel::authenticate($request->all()) ) {
 
         if(Sentinel::getUser()->roles()->first()->slug == 'admin')
-          return redirect('/system/admin');
+          return redirect('/topclass/admin');
         elseif (Sentinel::getUser()->roles()->first()->slug == 'freelancer')
           return redirect('/topclass/admin');
         elseif (Sentinel::getUser()->roles()->first()->slug == 'customer')
